@@ -1,7 +1,12 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
+import Home from '../Pages/Home';
+import Notes from '../Pages/Notes';
+import Todos from '../Pages/Todos';
 
 function Main({ closeMenu }) {
+  const url = 'https://63fc7626859df29986bcfce0.mockapi.io/api/v1/';
+
   return (
     <main
       className="flex justify-center items-center"
@@ -10,15 +15,15 @@ function Main({ closeMenu }) {
       <Routes>
         <Route
           path="/"
-          element={<p className="">Hello World!</p>}
+          element={<Home />}
         ></Route>
         <Route
-          path="/about"
-          element={<p className="">About us</p>}
+          path="/todos"
+          element={<Todos url={url} />}
         ></Route>
         <Route
-          path="/contact"
-          element={<p className="">Contact us</p>}
+          path="/notes"
+          element={<Notes url={url} />}
         ></Route>
       </Routes>
     </main>
