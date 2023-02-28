@@ -28,13 +28,13 @@ function Add({ addItem }) {
           placeholder="Name your item here..."
           className="flex border rounded mt-3 p-3"
         ></input>
-        <input
+        <textarea
           type="text"
           value={body}
           onChange={(event) => setBody(event.target.value)}
           placeholder="Type the detail here..."
-          className="flex border rounded mt-3 p-3"
-        ></input>
+          className="flex w-full border rounded mt-3 p-3"
+        ></textarea>
         <button
           type="submit"
           className="flex bg-black rounded mt-3 p-3 w-full text-white justify-center cursor pointer"
