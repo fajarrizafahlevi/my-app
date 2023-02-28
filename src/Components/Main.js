@@ -1,8 +1,7 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import Home from '../Pages/Home';
-import Notes from '../Pages/Notes';
-import Todos from '../Pages/Todos';
+import Active from '../Views/Active';
+import Finished from '../Views/Finished';
 
 function Main({ closeMenu }) {
   const url = 'https://63fc7626859df29986bcfce0.mockapi.io/api/v1/';
@@ -15,15 +14,19 @@ function Main({ closeMenu }) {
       <Routes>
         <Route
           path="/"
-          element={<Home />}
+          element={<Active />}
         ></Route>
         <Route
-          path="/todos"
-          element={<Todos url={url} />}
+          path="/active"
+          element={<Active url={url} />}
         ></Route>
         <Route
-          path="/notes"
-          element={<Notes url={url} />}
+          path="/finished"
+          element={<Finished url={url} />}
+        ></Route>
+        <Route
+          path="/about"
+          element={<Finished url={url} />}
         ></Route>
       </Routes>
     </main>

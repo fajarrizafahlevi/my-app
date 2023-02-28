@@ -20,23 +20,31 @@ function Navigation({ isMenuOpen, toggleMenu }) {
               to="/"
               onClick={toggleMenu}
             >
-              Home
+              Add
             </Link>
           </li>
           <li className="mt-3 text-xl">
             <Link
-              to="/todos"
+              to="/active"
               onClick={toggleMenu}
             >
-              Todos
+              Active
             </Link>
           </li>
           <li className="mt-3 text-xl">
             <Link
-              to="/notes"
+              to="/done"
               onClick={toggleMenu}
             >
-              Notes
+              Finished
+            </Link>
+          </li>
+          <li className="mt-3 text-xl">
+            <Link
+              to="/about"
+              onClick={toggleMenu}
+            >
+              About Us
             </Link>
           </li>
         </ul>
