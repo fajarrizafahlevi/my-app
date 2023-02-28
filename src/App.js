@@ -10,7 +10,6 @@ function App() {
   const [showMenu, setShowMenu] = useState(false);
   const [loading, setLoading] = useState(true);
   const [items, setItems] = useState(null);
-  const [archive, setArchive] = useState(false);
 
   const navigate = useNavigate();
 
@@ -32,10 +31,6 @@ function App() {
     setLoading(false);
   };
 
-  const toggleArchiveHandler = () => {
-    setArchive(!archive);
-  };
-
   const deleteItemHandler = async (id) => {
     await axios.delete(`${url}/items/${id}`);
     getItems(url);
@@ -52,8 +47,6 @@ function App() {
         closeMenu={closeMenuHandler}
         loading={loading}
         items={items}
-        isArchived={archive}
-        toggleArchive={toggleArchiveHandler}
         deleteItem={deleteItemHandler}
       />
     </div>

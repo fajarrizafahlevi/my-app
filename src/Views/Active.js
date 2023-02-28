@@ -18,8 +18,8 @@ function Active({ loading, items, deleteItem }) {
             <Item
               key={item.id}
               id={item.id}
-              name={item.name}
-              detail={item.detail}
+              title={item.title}
+              body={item.body}
               deleteItem={deleteItem}
             />
           );
