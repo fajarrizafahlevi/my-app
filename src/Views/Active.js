@@ -26,8 +26,7 @@ function Active({ loading, items, deleteItem }) {
         })}
         <Link
           to="/add"
-          className="absolute bottom-0 right-10 text-black"
-          size="2xl"
+          className="absolute bottom-10 right-10 text-black text-5xl"
         >
           <FontAwesomeIcon icon={faPlusCircle} />
         </Link>
