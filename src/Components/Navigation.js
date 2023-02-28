@@ -8,16 +8,16 @@ function Navigation({ isMenuOpen, toggleMenu }) {
 
   if (isMenuOpen) {
     menu = (
-      <div className="bg-black shadow fixed top-0 right-0 p-7 h-full w-2/5 text-white flex-col text-right">
+      <div className="bg-black shadow fixed top-0 right-0 p-5 h-full text-white flex-col text-right">
         <FontAwesomeIcon
           icon={faXmark}
           size="2xl"
           onClick={toggleMenu}
         />
-        <ul className="flex-column">
+        <ul className="flex-column p-3">
           <li className="mt-3 text-xl">
             <Link
-              to="/"
+              to="/add"
               onClick={toggleMenu}
             >
               Add
@@ -33,10 +33,10 @@ function Navigation({ isMenuOpen, toggleMenu }) {
           </li>
           <li className="mt-3 text-xl">
             <Link
-              to="/done"
+              to="/archive"
               onClick={toggleMenu}
             >
-              Finished
+              Archive
             </Link>
           </li>
           <li className="mt-3 text-xl">
@@ -44,7 +44,7 @@ function Navigation({ isMenuOpen, toggleMenu }) {
               to="/about"
               onClick={toggleMenu}
             >
-              About Us
+              About
             </Link>
           </li>
         </ul>
