@@ -17,26 +17,10 @@ function Navigation({ isMenuOpen, toggleMenu }) {
         <ul className="flex-column p-3">
           <li className="mt-3 text-xl">
             <Link
-              to="/add"
-              onClick={toggleMenu}
-            >
-              Add
-            </Link>
-          </li>
-          <li className="mt-3 text-xl">
-            <Link
               to="/active"
               onClick={toggleMenu}
             >
               Active
-            </Link>
-          </li>
-          <li className="mt-3 text-xl">
-            <Link
-              to="/archive"
-              onClick={toggleMenu}
-            >
-              Archive
             </Link>
           </li>
           <li className="mt-3 text-xl">
@@ -59,6 +43,7 @@ function Navigation({ isMenuOpen, toggleMenu }) {
         size="2xl"
         onClick={toggleMenu}
       />
+
       {menu}
     </nav>
   );

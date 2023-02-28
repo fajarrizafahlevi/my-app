@@ -3,11 +3,8 @@ import { Route, Routes } from 'react-router-dom';
 import About from '../Views/About';
 import Active from '../Views/Active';
 import Add from '../Views/Add';
-import Archive from '../Views/Archive';
 
-function Main({ closeMenu, check, toggleCheck }) {
-  const url = 'https://63fc7626859df29986bcfce0.mockapi.io/api/v1';
-
+function Main({ closeMenu, loading, items, deleteItem }) {
   return (
     <main
       className="flex justify-center items-center"
@@ -18,9 +15,9 @@ function Main({ closeMenu, check, toggleCheck }) {
           path="/"
           element={
             <Active
-              url={url}
-              isChecked={check}
-              toggleCheck={toggleCheck}
+              loading={loading}
+              items={items}
+              deleteItem={deleteItem}
             />
           }
         ></Route>
@@ -32,19 +29,15 @@ function Main({ closeMenu, check, toggleCheck }) {
           path="/active"
           element={
             <Active
-              url={url}
-              isChecked={check}
-              toggleCheck={toggleCheck}
+              loading={loading}
+              items={items}
+              deleteItem={deleteItem}
             />
           }
         ></Route>
         <Route
-          path="/archive"
-          element={<Archive url={url} />}
-        ></Route>
-        <Route
           path="/about"
-          element={<About url={url} />}
+          element={<About />}
         ></Route>
       </Routes>
     </main>
