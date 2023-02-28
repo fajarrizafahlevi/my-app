@@ -50,6 +50,7 @@ function App() {
       <Header
         isMenuOpen={showMenu}
         toggleMenu={toggleMenuHandler}
+        closeMenu={closeMenuHandler}
       />
       <Main
         closeMenu={closeMenuHandler}

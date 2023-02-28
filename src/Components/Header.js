@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Navigation from './Navigation';
 
-function Header({ isMenuOpen, toggleMenu }) {
+function Header({ isMenuOpen, toggleMenu, closeMenu }) {
   return (
     <header className="sticky top-0 bg-white border-b p-5 flex justify-between items-center">
       <Link to="/">
@@ -11,6 +11,7 @@ function Header({ isMenuOpen, toggleMenu }) {
       <Navigation
         isMenuOpen={isMenuOpen}
         toggleMenu={toggleMenu}
+        closeMenu={closeMenu}
       />
     </header>
   );

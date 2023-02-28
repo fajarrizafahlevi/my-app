@@ -4,12 +4,9 @@ import About from '../Views/About';
 import Active from '../Views/Active';
 import Add from '../Views/Add';
 
-function Main({ closeMenu, loading, items, addItem, deleteItem }) {
+function Main({ loading, items, addItem, deleteItem }) {
   return (
-    <main
-      className="flex justify-center items-center"
-      onClick={closeMenu}
-    >
+    <main className="flex justify-center items-center">
       <Routes>
         <Route
           path="/"
