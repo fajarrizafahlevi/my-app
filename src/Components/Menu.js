@@ -15,10 +15,10 @@ function Menu({ closeMenu }) {
       <ul className="flex-column p-3">
         <li className="mt-3 text-xl">
           <Link
-            to="/active"
+            to="/items"
             onClick={closeMenu}
           >
-            Active
+            Items
           </Link>
         </li>
         <li className="mt-3 text-xl">

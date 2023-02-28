@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import About from '../Views/About';
-import Active from '../Views/Active';
+import Items from '../Views/Items';
 import Add from '../Views/Add';
 
 function Main({ loading, items, addItem, deleteItem }) {
@@ -11,7 +11,7 @@ function Main({ loading, items, addItem, deleteItem }) {
         <Route
           path="/"
           element={
-            <Active
+            <Items
               loading={loading}
               items={items}
               deleteItem={deleteItem}
@@ -23,9 +23,9 @@ function Main({ loading, items, addItem, deleteItem }) {
           element={<Add addItem={addItem} />}
         ></Route>
         <Route
-          path="/active"
+          path="/items"
           element={
-            <Active
+            <Items
               loading={loading}
               items={items}
               deleteItem={deleteItem}

@@ -4,7 +4,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Item from '../Components/Item';
 
-function Active({ loading, items, deleteItem }) {
+function Items({ loading, items, deleteItem }) {
   if (loading) {
     return <p className="p-3">Loading...</p>;
   }
@@ -12,7 +12,7 @@ function Active({ loading, items, deleteItem }) {
   if (items) {
     return (
       <div>
-        <h2 className="text-xl font-bold text-center m-3">Active Item</h2>
+        <h2 className="text-xl font-bold text-center m-3">Item list</h2>
         {items.map((item) => {
           return (
             <Item
@@ -37,4 +37,4 @@ function Active({ loading, items, deleteItem }) {
   return <p className="p-3">No items here</p>;
 }
 
-export default Active;
+export default Items;
