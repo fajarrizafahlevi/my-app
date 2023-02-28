@@ -12,6 +12,7 @@ function Navigation({ isMenuOpen, toggleMenu }) {
         <FontAwesomeIcon
           icon={faXmark}
           size="2xl"
+          className="cursor-pointer"
           onClick={toggleMenu}
         />
         <ul className="flex-column p-3">
@@ -41,6 +42,7 @@ function Navigation({ isMenuOpen, toggleMenu }) {
       <FontAwesomeIcon
         icon={faBars}
         size="2xl"
+        className="cursor-pointer"
         onClick={toggleMenu}
       />
 

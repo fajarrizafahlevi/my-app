@@ -13,29 +13,37 @@ function App() {
 
   const navigate = useNavigate();
 
+  function toggleMenuHandler() {
+    setShowMenu(!showMenu);
+  }
+
+  function closeMenuHandler() {
+    setShowMenu(false);
+  }
+
   useEffect(() => {
     getItems(url);
   }, [url]);
 
-  const toggleMenuHandler = () => {
-    setShowMenu(!showMenu);
-  };
-
-  const closeMenuHandler = () => {
-    setShowMenu(false);
-  };
-
-  const getItems = async (url) => {
+  async function getItems(url) {
     await axios.get(`${url}/items`).then((response) => setItems(response.data));
 
     setLoading(false);
-  };
+  }
 
-  const deleteItemHandler = async (id) => {
-    await axios.delete(`${url}/items/${id}`);
-    getItems(url);
+  async function addItemHandler(item) {
+    await axios.post(`${url}/items`, item);
+
     navigate('/');
-  };
+    getItems(url);
+  }
+
+  async function deleteItemHandler(id) {
+    await axios.delete(`${url}/items/${id}`);
+
+    navigate('/');
+    getItems(url);
+  }
 
   return (
     <div>
@@ -47,6 +55,7 @@ function App() {
         closeMenu={closeMenuHandler}
         loading={loading}
         items={items}
+        addItem={addItemHandler}
         deleteItem={deleteItemHandler}
       />
     </div>

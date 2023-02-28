@@ -4,7 +4,7 @@ import About from '../Views/About';
 import Active from '../Views/Active';
 import Add from '../Views/Add';
 
-function Main({ closeMenu, loading, items, deleteItem }) {
+function Main({ closeMenu, loading, items, addItem, deleteItem }) {
   return (
     <main
       className="flex justify-center items-center"
@@ -23,7 +23,7 @@ function Main({ closeMenu, loading, items, deleteItem }) {
         ></Route>
         <Route
           path="/add"
-          element={<Add />}
+          element={<Add addItem={addItem} />}
         ></Route>
         <Route
           path="/active"
