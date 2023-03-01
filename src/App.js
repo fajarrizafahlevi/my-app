@@ -46,7 +46,7 @@ function App() {
   }
 
   return (
-    <div>
+    <div className="bg-gray-100">
       <Header
         isMenuOpen={showMenu}
         toggleMenu={toggleMenuHandler}

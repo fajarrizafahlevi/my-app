@@ -2,10 +2,11 @@ import React from 'react';
 
 function About() {
   return (
-    <div className="text-center">
-      <h2 className="font-bold text-xl m-3">About</h2>
-      <div className="border rounded m-3 p-3">
-        <p>This is basic app that can be function as a template for my app</p>
+    <div className="text-center w-full">
+      <h2 className="font-bold text-xl">About</h2>
+      <div className="border rounded bg-white shadow m-3 p-3">
+        <p>This is a basic app that can be used as template for any of my app</p>
+        <br />
         <span>&copy; 2023</span>
       </div>
     </div>

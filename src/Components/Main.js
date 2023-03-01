@@ -6,7 +6,7 @@ import Add from '../Views/Add';
 
 function Main({ loading, items, addItem, deleteItem }) {
   return (
-    <main className="flex justify-center items-center">
+    <main className="flex h-screen w-4/5 mx-auto pt-20 p-3 items-center">
       <Routes>
         <Route
           path="/"

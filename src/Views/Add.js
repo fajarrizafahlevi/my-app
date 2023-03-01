@@ -15,7 +15,7 @@ function Add({ addItem }) {
   }
 
   return (
-    <div className="flex-col border rounded m-3 p-3 gap-3">
+    <div className="bg-white shadow flex-col border rounded w-full m-3 p-3 gap-3">
       <h2 className="text-center text-xl font-bold">Add New Item</h2>
       <form
         className="flex-col"
@@ -26,14 +26,14 @@ function Add({ addItem }) {
           value={title}
           onChange={(event) => setTitle(event.target.value)}
           placeholder="Name your item here..."
-          className="flex border rounded mt-3 p-3"
+          className="border rounded w-full mt-3 p-3"
         ></input>
         <textarea
           type="text"
           value={body}
           onChange={(event) => setBody(event.target.value)}
           placeholder="Type the detail here..."
-          className="flex w-full border rounded mt-3 p-3"
+          className="border rounded w-full mt-3 p-3"
         ></textarea>
         <button
           type="submit"

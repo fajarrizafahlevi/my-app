@@ -9,7 +9,7 @@ function Item({ id, title, deleteItem }) {
       <div>
         <FontAwesomeIcon
           icon={faDeleteLeft}
-          className="ml-3"
+          className="ml-3 cursor-pointer"
           onClick={() => deleteItem(id)}
         />
       </div>
