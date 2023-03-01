@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import useInput from '../hooks/useInput';
 
 function Add({ addItem }) {
-  const [title, setTitle] = useState('');
-  const [body, setBody] = useState('');
+  const [title, titleChange] = useInput('');
+  const [body, bodyChange] = useInput('');
 
   const item = {
     title: title,
@@ -24,14 +24,14 @@ function Add({ addItem }) {
         <input
           type="text"
           value={title}
-          onChange={(event) => setTitle(event.target.value)}
+          onChange={titleChange}
           placeholder="Name your item here..."
           className="border rounded w-full mt-3 p-3"
         ></input>
         <textarea
           type="text"
           value={body}
-          onChange={(event) => setBody(event.target.value)}
+          onChange={bodyChange}
           placeholder="Type the detail here..."
           className="border rounded w-full mt-3 p-3"
         ></textarea>

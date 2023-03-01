@@ -7,18 +7,18 @@ import Main from './Components/Main';
 function App() {
   const url = 'https://63fc7626859df29986bcfce0.mockapi.io/api/v1';
 
-  const [showMenu, setShowMenu] = useState(false);
+  const [menu, setMenu] = useState(false);
   const [loading, setLoading] = useState(true);
   const [items, setItems] = useState(null);
 
   const navigate = useNavigate();
 
   function toggleMenuHandler() {
-    setShowMenu(!showMenu);
+    setMenu(!menu);
   }
 
   function closeMenuHandler() {
-    setShowMenu(false);
+    setMenu(false);
   }
 
   useEffect(() => {
@@ -48,7 +48,7 @@ function App() {
   return (
     <div>
       <Header
-        isMenuOpen={showMenu}
+        isMenuOpen={menu}
         toggleMenu={toggleMenuHandler}
         closeMenu={closeMenuHandler}
       />
