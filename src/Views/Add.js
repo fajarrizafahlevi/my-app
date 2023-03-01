@@ -15,7 +15,7 @@ function Add({ addItem }) {
   }
 
   return (
-    <div className="bg-white shadow flex-col border rounded w-full m-3 p-3 gap-3">
+    <div className="bg-white flex-col border rounded w-full m-3 p-3 gap-3">
       <h2 className="text-center text-xl font-bold">Add New Item</h2>
       <form
         className="flex-col"

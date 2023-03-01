@@ -4,7 +4,7 @@ import Navigation from './Navigation';
 
 function Header({ isMenuOpen, toggleMenu, closeMenu }) {
   return (
-    <header className="fixed top-0 border-b bg-white shadow">
+    <header className="fixed top-0 border-b bg-white">
       <div className="flex h-20 w-screen px-5 justify-between items-center">
         <Link to="/">
           <span className="font-bold text-3xl">My App</span>

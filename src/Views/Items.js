@@ -13,7 +13,7 @@ function Items({ loading, items, deleteItem }) {
     return (
       <div className="w-full">
         <h2 className="text-xl font-bold text-center">Items List</h2>
-        <div className="border rounded bg-white shadow m-3 p-3 h-96 overflow-auto">
+        <div className="border rounded bg-white m-3 p-3 h-96 overflow-auto">
           {items.map((item) => {
             return (
               <Item
