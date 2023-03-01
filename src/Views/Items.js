@@ -28,7 +28,7 @@ function Items({ loading, items, deleteItem }) {
         </div>
         <Link
           to="/add"
-          className="fixed bottom-10 right-10 text-black text-5xl cursor-pointer"
+          className="fixed bottom-7 right-7 text-black text-5xl cursor-pointer"
         >
           <FontAwesomeIcon icon={faPlusCircle} />
         </Link>
